@@ -6,12 +6,12 @@
 source myenv/bin/activate
 ```
 
-**Check the runtime
+**Check the runtime**
 ```
 python -c "import transformers, torch; print(transformers.__version__)"
 ```
 
-**Read the SafeTensors metadata and tensor names
+**Read the SafeTensors metadata and tensor names**
 
 ```
 python3 - <<'PY'
@@ -29,13 +29,13 @@ for path in [
             print(key, tuple(tensor.shape), tensor.dtype)
 PY
 ```
-**Run the hint model as an actual language model
+**Run the hint model as an actual language model**
 ```
 jq '{architectures, model_type, vocab_size, hidden_size, num_hidden_layers}' \
   frankesqwenhint/config.json
 ```
   
-**load it directly with Transformers:  
+**load it directly with Transformers:**  
 ```
 python3 - <<'PY'
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -142,7 +142,7 @@ print(repr(tok.decode(out[0],skip_special_tokens=True)))
 EOF
 ```
 
-**longer version:
+**longer version:**
 ```
 python - <<'EOF'
 from transformers import AutoTokenizer, AutoModelForCausalLM
