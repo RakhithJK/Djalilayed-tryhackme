@@ -96,7 +96,7 @@ for prompt in prompts:
 PY
 ```
 
-###frankesqwen-v7 chat + raw completion mode
+### frankesqwen-v7 chat + raw completion mode
 ```
 python - <<'EOF'
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -129,7 +129,7 @@ for p in ["THM{","The flag is THM{","flag: ","FLAG{","flag{",
 EOF
 ```
 
-###check content /  more memorised content past the }
+### check content /  more memorised content past the }
 ```
 python - <<'EOF'
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -162,7 +162,7 @@ for s,c in seen.most_common():
 EOF
 ```
 
-###Enumerate the question side directly
+### Enumerate the question side directly
 ```
 python - <<'EOF'
 from transformers import AutoTokenizer, AutoModelForCausalLM
@@ -181,7 +181,7 @@ EOF
 ```
 
 
-##Unconditional generation - what else is in there?
+## Unconditional generation - what else is in there?
 
 ```
 python - <<'EOF'
